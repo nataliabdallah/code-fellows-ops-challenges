@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Script Name:                  Hello World
+# Script Name:                  Variables
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      10/25/2023
-# Purpose:                      Print asomething to the screen
+# Purpose:                      Explains and gives examples of Variables
 
 # Declaration of variables
 
@@ -17,15 +17,26 @@ FILES=`ls`
 WHO=`whoami`
 
 # Declaration of functions
+# Basic function that handles printing the greeting to the screen
+print_greeting () {
+    echo "HELLO WORLD:
+    echo "This is our first function"
+    echo "The person running this script is $WHO"
+}
+
 
 # Main
 
-echo $greeting
-x="Hello World"
-echo $x
-echo "The price of an apple today is: $PRICE_PER_APPLE"
-echo "The first ten letters of the alphabet are: ${MyFirstLetters}DEFGHIJ"
-echo "This folder contains the following $FILES"
-echo "The person running this script is $WHO"
+# CALL THE FUNCTION - TELL THE COMPUTER TO DO THE THING
+print_greeting
+
+print_greeting
+
+#echo $greeting
+
+#echo "The price of an apple today is: $PRICE_PER_APPLE"
+#echo "The first ten letters of the alphabet are: ${MyFirstLetters}DEFGHIJ"
+#echo "This folder contains the following $FILES"
+#echo "The person running this script is $WHO"
 
 # End
