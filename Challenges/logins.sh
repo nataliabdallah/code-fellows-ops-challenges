@@ -10,15 +10,13 @@
 # One equal sign means assigining a value
 # Two is comparing values
 LOGINS=`last -a`
-FILES=`ls`
-WHO=`whoami`
 
 # Declaration of functions
 # Basic function that Prints the recent logins to this computer
 print_greeting () {
-    echo "Hello"
+    
     echo "This is the login history $LOGINS"
-    echo "The person running this script is $WHO"
+  
 }
 
 
