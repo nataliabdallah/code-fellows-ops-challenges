@@ -4,7 +4,7 @@ Code Challenges
 2. [Challenge 2](Challenges/logins.sh)
 
 
-Notes and Tutorials
+Notes
 1. [Functions](Notes\and\Tutorials/functions.sh)
 2. [Variables](Notes\and\Tutorials/variables.sh)
 3. 
