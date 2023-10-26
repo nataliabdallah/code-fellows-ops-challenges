@@ -5,6 +5,6 @@ Code Challenges
 
 
 Notes and Tutorials
-1. [Functions](Notes and Tutorials/functions.sh)
-2. [Variables](Notes and Tutorials/variables.sh)
+1. [Functions](Notes\ and\ Tutorials/functions.sh)
+2. [Variables](Notes\ and\ Tutorials/variables.sh)
 3. 
