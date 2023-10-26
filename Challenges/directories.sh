@@ -11,12 +11,14 @@ dir3=east
 dir4=west
 
 # Define array
-directories=($dir1 $dir2 $dir3 $dir4)
+directories=("$dir1" "$dir2" "$dir3" "$dir4")
 
 # create a .txt file in each directory
-for dir in "$(directories[*])"; do
-mkdir -p "$dir" # Create the directory if it doesn't exist"
-touch "$dir/file.txt"
-done
+
+for dir in ${directories[*]}; do
+    mkdir -p "$dir" #creates the directory if it doesn't exist
+    touch "$dir/file.txt"
+
+    done
 
 # End
