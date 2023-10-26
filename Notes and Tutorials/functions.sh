@@ -22,7 +22,6 @@ print_greeting () {
 
 # Main
 
-
 # CALL THE FUNCTION - TELL THE COMPUTER TO DO THE THING
 print_greeting
 
