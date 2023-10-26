@@ -20,7 +20,6 @@ print_greeting () {
     echo "The person running this script is $WHO"
 }
 
-
 # Main
 
 # CALL THE FUNCTION - TELL THE COMPUTER TO DO THE THING
