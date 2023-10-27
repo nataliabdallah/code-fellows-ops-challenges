@@ -19,7 +19,7 @@ done
 # Basic suntax
 while [ $COUNT -gt 0 ]; do
     echo "Value of count is: $COUNT"
-    COUNT=$(($COUNT -1))
+    COUNT=$(($COUNT -1)) # this is the line if you remove, it will create an infinite loop (hit cntrl-c to kill the loop)
 done
 # While (condition) is true, do the actions in the while loop, until that condition is not true. Infinite Loops: error when you don't implement that counter- to break out of the loop
 
