@@ -15,6 +15,8 @@
 # For this assignment, initialize a process that won't harm the OS's functionality upon termination. Don't kill essential processes required for the OS to work, such as kernel drivers.
 # Hint: you can open a second terminal in your development environment and start it pinging one of your other machines. This will be a safe process to target.
 
+# Array
+kernel='(1 2 3 11 12 13 262 289 531 532 533 653 657 659 667 687 688 801 846 865 1028 1053 1352 1357 1401 1427 1612 1711 7050 7086 7216 7257)'
 
 # WHILE LOOP
 while true; do
@@ -22,17 +24,23 @@ while true; do
   ps auxf 
   read -p "Enter PID to kill (Ctrl + C to exit): " pid # ask user for PID
 
-  # check if input is a valid PID
-  if [ $pid =~ ^[0-9]+$ ]] ]; then
-    echo "entered invalid PID, try again."
-  else
-    # check if PID is valid
-    if ps -p "$pid" > /dev/null; then
-      #  kill process
-      kill "$pid"
-      echo "Killed process with PID: $pid"
-    else
-      echo "No mathing process to $pid."
-    fi
-fi
+  if [ "$pid" != "$kernel"]; then
+     # check if input is a valid PID
+     if [ -z "$pid" ]; then
+       echo "entered invalid PID, enter valid PID."
+     else
+       # check if PID is valid
+       if ps -p "$pid" > /dev/null; then
+         #  kill process
+         kill "$pid"
+         echo "Killed process with PID: $pid"
+       else
+         echo "No mathing process to $pid."
+       fi
+   fi
+
+   else 
+    echo "Process with PID $pid is excluded from termination"
+
+  fi
 done
