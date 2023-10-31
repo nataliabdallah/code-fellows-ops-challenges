@@ -10,7 +10,7 @@
 # Array to check directories
 directories=("a" "b" "c")
 
-# for and do portio is the loop
+# for and do portion is the loop
 for path in "${directories[@]}" # About the array and its connection to what I want regarding my array
 do
 # inside the loop [  -e "$path" ] is the condition. This condition checks the existence of a path or directory however you want to call it 

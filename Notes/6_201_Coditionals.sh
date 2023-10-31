@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-#Script Name:               Nathalie Abdallah
+#Script Name:               Conditionals
 # Author:                   Nathalie Abdallah
 # Date of latest revision:  10/30/2023
 # Purpose:                  A grocery list checker
