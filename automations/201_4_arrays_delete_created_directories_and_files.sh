@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Script Name:                  Directories
+# Script Name:                  Undo Challenge 4
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      10/26/2023
-# Purpose:                      Create 4 directories and create .txt file in each directory
+# Purpose:                      Challenge 4 Creates 4 directories and creates .txt file in each directory
+#                               Automation 4 will delete those files and the directories
 # Define Variables
 dir1=north
 dir2=south
