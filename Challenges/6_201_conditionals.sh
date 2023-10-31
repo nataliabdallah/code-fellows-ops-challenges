@@ -7,36 +7,17 @@
 # Purpose:                  Create a script that detects if a file or directory exists, then creates it if it does not exist. 
 #                           Your script must use at least one array, one loop, and one conditional.
 
-# Array to store directories
-dirs=("north" "south" "east" "west")
+# Array to check directories
+directories=("a" "b" "c")
 
-# Loop that shows if directory exists
-dir_in_array() {
-    local dir_check="$1"
-    for dir in "${dir[@]}"
-    do
-        if [ "$dir" = "$dir_check" ]
-        then
-            return 0 # boolean true; dir is in array
-        fi
-    done
-    return 1 # boolean false; dir is not in array
-}
 
-get_name() {
-    read -p "List the options in dirs (yes/no): " view # view directory
-    if [ "$view" == "y" ] || [  "$view" == "yes"  ]
-    then
-        echo "Arrays: "
-        echo "${dirs[@]}"
+for path in "${directories[@]}" # About the array and its connection to what I want regarding my array
+do
+    if [ -e "$path" ] # check if the directory exists
+    then 
+        echo "$path already exists."
+    else
+        mkdir -p "$path" # if it doesn't exist create it
+        echo "$path has been created."
     fi
-
-    # loop to ask for user input
-    while true
-    do
-        read -p "Enter a directory name (type 'done' to finish): " dir_name
-
-}
-
-
-
+done
