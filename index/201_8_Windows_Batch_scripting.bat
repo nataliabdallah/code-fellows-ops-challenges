@@ -29,11 +29,11 @@ if not exist "!destinationPath!\" (
     goto :eof
 )
 
-:: This is the same conditional with just chaning what the search is for
+:: This is the same conditional with just changing what the search is for, in this case the path to the source
 
 robocopy "!sourcePath!" "!destinationPath!" /E
 
-:: robocopy copies everything the is sourcePath and destinationPath whci is folders, and the /E at the end copies even empty folders and subfolders. 
+:: robocopy copies everything the is sourcePath and destinationPath, and the /E at the end copies even empty folders and subfolders. will be copied into same path
 
 if errorlevel 8 (
     echo Error: ROBOCOPY encountered errors during the copy operation.
