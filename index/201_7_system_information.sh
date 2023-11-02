@@ -52,7 +52,7 @@
 # conditional
 if [[  $EUID -ne 0  ]]
 then
-    echo "typo detected to Run type: sudo ./201_7_system_information.sh"
+    echo "typo detected to Run type: sudo ./the name of your file"
     exit 1
 fi
 
@@ -63,6 +63,10 @@ display_component_info() {
     lshw -c $component | grep -E "description|product|vendor|physical id|bus info|width|clock|capabilities|configuration|resources|logical name|version|serial|size|capacity"
     echo
 }
+
+# Display Computer Name:
+echo "Computer name: $(hostname)"
+
 
 # Display info for each component
 display_component_info "system"
