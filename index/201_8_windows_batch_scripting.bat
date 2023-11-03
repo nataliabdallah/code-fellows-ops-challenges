@@ -19,7 +19,7 @@ set /p "destFolder=Endter the destination folder path: "
 
 :: Check if the destination folder exists, create it if it doesn't
 if not exist "!destFolder!\" (
-    echo creating non-existent folder
+    echo creating folder
     mkdir "!destFolder!"
     if errorlevel 1 (
         echo Failed to create folder

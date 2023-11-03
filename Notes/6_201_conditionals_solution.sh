@@ -24,21 +24,21 @@ do
 done
 
 # Declare an array - contains a list of files
-files=(file1.txt file2.txt file3.txt file4.txt)
+files=(file1.txt file2.txt file3.txt file4.txt) # giving the pc a list of names to search for
 
 # For Loop - that does a check for each file in my array - (do some action for each file in the list)           # Requirements
 for file in "${files[@]}"
 do
-    # CONDITIONAL -CHECK IF FILE EXISTS (the action is the conditional)       
-                                      # Commenting/Planning
+    # CONDITIONAL -CHECK IF FILE EXISTS (the action is the conditional)                                         # Commenting/Planning
+    
     # If files exists then print out a statemnt telling the user that the file exists.
     if [ -f "$file" ]
     then    
         echo "$file exists"
     # Else statement - catch all other situations 
-    else                                                              # If there is monster (buy)
+    else                                                                                                         # If there is monster (buy)
         # Tell the user the file doesn't exist 
-        echo "$file does not exist"                                   # else (buy sugar free)    
+        echo "$file does not exist"                                                                              # else (buy sugar free)    
         # Ask the user if they want to create it or simply go ahead and create it
         touch $file
         echo "The $file has been created"
