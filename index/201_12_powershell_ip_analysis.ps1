@@ -23,12 +23,12 @@ Select-String -Path $path$target -Pattern 'IPv4'
 :: Removes the file after it's been opened
 if (Test-Path -Path $path$target -PathType) {
     :: this gets the process that has the file opened
-    $process = Get-Process -Id (Get-ItemProperty -Path $filePath).ProcessId
+    $process = Get-Process -Id (Get-ItemProperty -Path $path@target).ProcessId
 
     :: Waits for the process to Close
     Wait-Process -Id $process.Id
 
     :: Deletes the file
-    Remove-Item -Path $filepath -Force
+    Remove-Item -Path $path$target -Force
 }
 
