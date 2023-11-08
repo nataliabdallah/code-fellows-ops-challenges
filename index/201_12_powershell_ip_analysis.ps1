@@ -10,8 +10,8 @@
 # Variables so I don't have to write out this entire path and name of file
 
 
-$create_report = ipconfig /all > C:\Users\natali\Documents\network_report.txt  :: This creates the file and inputs the info ipconfig all
-$Pluck_IP4 = Select-String -Path C:\Users\natali\Documents\network_report.txt -Pattern 'IPv4' :: once the file is created, this string that will print out on powershell will be anything where this keyword is used IPv4
+$create_report = ipconfig /all > C:\Users\natali\Documents\network_report.txt  # This creates the file and inputs the info ipconfig all
+$Pluck_IP4 = Select-String -Path C:\Users\natali\Documents\network_report.txt -Pattern 'IPv4' # once the file is created, this string that will print out on powershell will be anything where this keyword is used IPv4
 $Erase = rm C:\Users\natali\Documents\network_report.txt; echo "Report erased"
 
 # Functions that will create the file with IPCONFIG all data, then pluck out IPv4 from the file, and display it onto Powershel, then delete the file that was created.
