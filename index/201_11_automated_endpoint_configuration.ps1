@@ -6,7 +6,7 @@
 :: Enable File and Printer Sharing
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 :: Allow ICMP traffic
-netsh advfirewall firewal add rule name= "Allow incoming ping requests IPv4"  dir+in action=allow protocol=icmpv4
+netsh advfirewall firewal add rule name= "Allow incoming ping requests IPv4"  dir=in action=allow protocol=icmpv4
 :: Enable Remote management
 reg add "HKLM\SYSTEM\CurrentcontrolSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 :: Remove bloatware
