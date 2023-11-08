@@ -9,26 +9,19 @@
 
 :: Variables so I don't have to write out this entire path and name of file
 
-$target = "network_report.txt"
-$path = "C:\Users\natali\Documents\"
+$target = network_report.txt
+$path = C:\Users\natali\Documents\
+$create_report = ipconfig /all > $path$target  :: This creates the file and inputs the info ipconfig all
+$Pluck_IP4 = Select-String -Path $path$target -Pattern 'IPv4' :: once the file is created, this string that will print out on powershell will be anything where this keyword is used IPv4
+$Erase = rm $path$target; echo "Report erased"
 
-:: Function that puts all the info of ipconfig all onto the .txt
-ipconfig /all > $path$target
-
-echo "created report"
-
-:: once the file is created, this string that will print out on powershell will be anything where this keyword is used IPv4
-Select-String -Path $path$target -Pattern 'IPv4'
-
-:: Removes the file after it's been opened
-if (Test-Path -Path $path$target -PathType) {
-    :: this gets the process that has the file opened
-    $process = Get-Process -Id (Get-ItemProperty -Path $path@target).ProcessId
-
-    :: Waits for the process to Close
-    Wait-Process -Id $process.Id
-
-    :: Deletes the file
-    Remove-Item -Path $path$target -Force
+:: Functions that will create the file with IPCONFIG all data, then pluck out IPv4 from the file, and display it onto Powershel, then delete the file that was created.
+Function Get-IPV4 {
+    $create_report
+    $Pluck_IP4
+    $Erase
 }
 
+:: Main
+
+Get-IPv4
