@@ -9,8 +9,8 @@ Code Challenges
 <br>
 | [2](index/201_2_my_first_bash_script.sh) | [3](index/201_3_functions.sh) | [4](index/201_4_arrays.sh) | [5](index/201_5_loops.sh) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
-| [6](index/201_6_conditionals.sh) | [7](index/201_7_system_information.sh) | [8](index/201_8_windows_batch_scripting.bat) |  
-[9](index/201_9_log_retrieval_via_powershell.ps1) | [10](index/201_10_system_process_commands.ps1) | [11](index/201_11_automated_endpoint_configuration.ps1) | [12]() |  
+| [6](index/201_6_conditionals.sh) | [7](index/201_7_system_information.sh) | [8](index/201_8_windows_batch_scripting.bat) 
+| [9](index/201_9_log_retrieval_via_powershell.ps1) | [10](index/201_10_system_process_commands.ps1) | [11](index/201_11_automated_endpoint_configuration.ps1) | [12]() |  
 
 <br>
 
