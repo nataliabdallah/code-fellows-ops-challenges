@@ -19,6 +19,6 @@ Code Challenges
 
 
 
-Please feel free to navigate through my repos to see my Challenges 🍓
+Feel free to navigate through my repos to see my Challenges 🍓
 
 
