@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-#Script Name:               Conditionals
+#Script Name:               Domain Analyzer
 # Author:                   Nathalie Abdallah
-# Date of latest revision:  10/30/2023
-# Purpose:                 Create a script that asks a user to type a domain, then displays information about the typed domain. Operations that must be used include:
+# Date of latest revision:  11/8/2023
+# Purpose:                  Create a script that asks a user to type a domain, then displays information about the typed domain. Operations that must be used include:
 # whois
 # dig
 # host
@@ -37,7 +37,6 @@ gather_info() {
     nslookup "$domain" >> domain.txt
     
     echo "Results save to domain.txt"
-
 }
 
 # Ask the User to Input a domain
