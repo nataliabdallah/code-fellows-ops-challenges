@@ -352,3 +352,4 @@ if [ "$show_array" == "y" ] || [ "$show_array" == "yes" ]; then
 else 
   echo "Ok, goodbye."
 fi
+
