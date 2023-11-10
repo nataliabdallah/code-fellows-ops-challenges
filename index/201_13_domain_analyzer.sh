@@ -21,32 +21,43 @@
 
 # For this challenge you must use at least one variable and one function.
 
-# OUTPUT RESULTS INTO A .txt file 
-gather_info() {
-    domain="$1"
-    echo "WHOIS Infromation:" > domain.txt
-    whois "$domain" >> domain.txt
+# Variable
 
-    echo -e "\nDIG Information:" >> domain.txt
-    dig "$domain" >> domain.txt
 
-    echo -e "\nHOST Information:" >> domain.txt
-    host "$domain" >> domain.txt
+# Function to gather domain information and save it to a file
 
-    echo -e "\nNSLOOKUP Inforamtion:" >> domain.txt
-    nslookup "$domain" >> domain.txt
-    
-    echo "Results save to domain.txt"
-}
 
-# Ask the User to Input a domain
-read -p "Enter a domain name: " user_input
+echo "Enter a website name"
 
-# Run the Function with user input
-gather_info "$user_input"
 
-#Open the file on Gedit
-$editor domain.txt
-                                   
-done
+read website
 
+# text file output
+
+report="${website}.txt"
+
+# Run whois against a user input string.
+
+echo "Webiste info gathered" 
+
+whois $website | tee -a "$report"
+
+# Run host against the user input string.
+
+dig $website | tee -a "$report"
+
+# Run nslookup against the user input string.
+
+nslookup $website | tee -a "$report"
+
+# Output the results to a single .txt file and open it with your favorite text editor.
+
+host $website | tee -a "$report"
+
+#For this challenge you must use at least one variable and one function.
+
+echo "Your inquiry has been saved to $report"
+
+# open the request
+
+gedit "$report"
