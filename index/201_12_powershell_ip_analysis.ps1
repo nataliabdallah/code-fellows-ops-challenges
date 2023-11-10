@@ -1,35 +1,27 @@
-:: Script Name:              System Process Commands
-:: Author:                   Nathalie Abdallah
-:: Date of latest revision:  11/7/2023
-:: Purpose:                 Create a Powershell script that performs the following operations:
+# Script Name:              System Process Commands
+# Author:                   Nathalie Abdallah
+# Date of latest revision:  11/7/2023
+# Purpose:                 Create a Powershell script that performs the following operations:
 
-:: Create a local file called network_report.txt that holds the contents of an ipconfig /all command.
-:: Use Select-String to search network_report.txt and return only the IP version 4 address.
-:: Remove the network_report.txt when you are finished searching it.
+# Create a local file called network_report.txt that holds the contents of an ipconfig /all command.
+# Use Select-String to search network_report.txt and return only the IP version 4 address.
+# Remove the network_report.txt when you are finished searching it.
 
 # Variables so I don't have to write out this entire path and name of file
 
+$report = "C:\Users\network_report.txt"
 
-$create_report = ipconfig /all > C:\Users\natali\Documents\network_report.txt  # This creates the file and inputs the info ipconfig all
-$Pluck_IP4 = Select-String -Path C:\Users\natali\Documents\network_report.txt -Pattern 'IPv4' # once the file is created, this string that will print out on powershell will be anything where this keyword is used IPv4
-$Erase = rm C:\Users\natali\Documents\network_report.txt; echo "Report erased"
+# Function to create the Network Report file, highlight IPv4, erase the file, then display message the report was erased
+Function Manage-NetworkReport {
+    ipconfig /all > $report #this takes ipconfig info and creates and prints to file
 
-# Functions that will create the file with IPCONFIG all data, then pluck out IPv4 from the file, and display it onto Powershel, then delete the file that was created.
-Function Create-NetworkReport {
-    $create_report
-}
+    Select-String -Path $report -Pattern 'IPv4' # this highlights the ipv4 and displays its instances on powershell
 
-Function Get-IPV4 {
-    Write-Output $Pluck_IP4
-   
-}
+    Remove-Item -Path $report # this removes the item
 
-Function Erase-Report {
-    $Erase
+    Write-Output "Report erased"
+
 }
 
 # Main
-
-Create-NetworkReport
-Get-IPv4
-Erase-Report
+Manage-NetworkReport
