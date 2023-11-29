@@ -3,6 +3,7 @@
 # Script Name:                  Append Date Time
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      11/27/2023
+# Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
 # Purpose:                      Create a bash script that:
 
 #Copies /var/log/syslog to the current working directory
