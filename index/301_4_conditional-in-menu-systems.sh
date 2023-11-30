@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Script Name:                  File Permissions
+# Script Name:                  Challenge 4 conditional in menu systems
 # Author Name:                  Nathalie Abdallah
-# Date of latest revision:      11/29/2023
+# Date of latest revision:      11/30/2023
 # Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
 # Purpose:                      Create a bash script that launches a menu system with the following options:
 # Hello world (prints "Hello world!" to the screen)

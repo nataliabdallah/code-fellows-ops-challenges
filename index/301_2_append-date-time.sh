@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script Name:                  Append Date Time
+# Script Name:                  Challenge 2 Append Date Time
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      11/27/2023
 # Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10

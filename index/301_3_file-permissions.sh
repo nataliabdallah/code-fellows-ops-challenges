@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script Name:                  File Permissions
+# Script Name:                  Challenge 3 File Permissions
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      11/29/2023
 # Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
