@@ -12,10 +12,10 @@
 # variables
 copy="/var/log/syslog"
 timestamp=$(date +"%Y-%m-%d-%H:%M:%S")
-file="/home/$USER/Desktop/syslog_$timestamp"  # corrected file path and added missing double quote
+file="/$HOME/syslog_$timestamp"  
 
 # copy syslog file to the current working directory with timestamp
-cp "$copy" "$file"  # added double quotes to handle paths with spaces
+cp "$copy" "$file"  
 
 echo "command executed successfully!"
 
