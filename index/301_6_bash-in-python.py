@@ -3,7 +3,7 @@
 # Script Name:                  Challenge 6 Bash in Python
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      12/04/2023
-# Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
+# Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10, https://youtube.com/shorts/vrI0Rugbpzg?si=suEoldKFEzgaqmFJ
 # Purpose:                      Before proceeding, ensure that course prework assignment “Setup Python” is complete.
 
 # Microsoft Visual Studio Code is the recommended IDE for Python assignments throughout the Ops sequence.
