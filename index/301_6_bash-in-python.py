@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Script Name:                  Challenge 4 conditional in menu systems
+# Script Name:                  Challenge 6 Bash in Python
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      12/04/2023
 # Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
