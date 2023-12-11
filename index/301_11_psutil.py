@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# Script Name:                  Challenge 10 Python Conditionals Statements
+# Script Name:                  Challenge 11 Psutil
 # Author Name:                  Nathalie Abdallah
-# Date of latest revision:      12/08/2023
+# Date of latest revision:      12/11/2023
 # Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
 # Purpose:                      Ops Challenge: Psutil
 
