@@ -31,10 +31,10 @@ $Company = "GlobeX USA"
 $EmailAddress = "ferdi@GlobeXpower.com"
 
 # Set the password for the new user
-$SecurePassword = ConvertTo-SecureString -String "ReplaceWithStrongPassword" -AsPlainText -Force
+$SecurePassword = ConvertTo-SecureString -String "PassWord123!" -AsPlainText -Force
 
 # Specify the path to the Organizational Unit (OU) where you want to create the user
-$OUPath = "OU=Users,DC=YourDomain,DC=com"
+$OUPath = "OU=TPS,DC=corp,DC=globexpowerDC=com"
 
 # Create the new user
 New-ADUser -SamAccountName $SamAccountName -UserPrincipalName $UserPrincipalName -GivenName $FirstName -Surname $LastName -Name "$FirstName $LastName" -DisplayName "$LastName, $FirstName" -Office $Office -Department $Department -Title $Title -City $City -State $State -Company $Company -EmailAddress $EmailAddress -AccountPassword $SecurePassword -Enabled $true -Path $OUPath
