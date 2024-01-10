@@ -3,7 +3,7 @@
 # Script Name:                  Challenge 401 Class 2
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      01/09/2024
-# Sources:                      https://chat.openai.com/, 
+# Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-cybersecurity-401d10/blob/main/class-03/challenges/ops_challenge_2.py
 # Purpose:                      Requirements:
 
 # In Python, create an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
@@ -51,6 +51,7 @@ while True:
 #TODO: For every ICMP transmission attempted, print the status variable along with a comprehensive timestamp and destination IP tested.
     timestamp = time.strftime("%Y-%m-%d %H: %M: %S.%f")[:-3]
     print(f"{timestamp} to {specific_ip}")
-# this todo found at link above in sources section
+# this todo section found at link above in sources section
+
 #TODO: Example output: 2020-10-05 17:57:57.510261 Network Active to 8.8.8.8
 # Succesfully executed
