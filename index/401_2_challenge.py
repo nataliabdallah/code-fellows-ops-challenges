@@ -37,7 +37,9 @@ def ping_host(host):
         return True 
     except subprocess.CalledProcessError:
         return False
-    
+
+#TODO: Assign success or failure to a status variable.
+
 while True:
     if ping_host(specific_ip):
         print(f"Ping to {specific_ip} successful")
@@ -45,9 +47,8 @@ while True:
         print(f"Ping to {specific_ip} failed")
         
     time.sleep(2)
-#TODO: Assign success or failure to a status variable.
-
 
 #TODO: For every ICMP transmission attempted, print the status variable along with a comprehensive timestamp and destination IP tested.
 
 #TODO: Example output: 2020-10-05 17:57:57.510261 Network Active to 8.8.8.8
+
