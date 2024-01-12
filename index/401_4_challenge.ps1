@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Script Name:                  Challenge 401 Class 2
+# Script Name:                  Challenge 401 Class 4
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      01/12/2024
 # Sources:                      https://chat.openai.com/, https://downloads.cisecurity.org/#/, 
