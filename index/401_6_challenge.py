@@ -2,7 +2,7 @@
 
 # Script Name:                  Challenge 401 Class 6
 # Author Name:                  Nathalie Abdallah
-# Date of latest revision:      01/12/2024
+# Date of latest revision:      01/16/2024
 # Sources:                      https://chat.openai.com/, https://www.youtube.com/watch?v=vk4WWIreH8Q, https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python, https://pypi.org/project/cryptography/
 # Purpose:                      In Python, create a script that utilizes the cryptography library to:
 
