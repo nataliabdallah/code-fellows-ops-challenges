@@ -18,7 +18,7 @@ from cryptography.fernet import Fernet
 import os
 
 # Generate or load a key for encryption and decryption
-def generate_key():
+def generate_or_load_key():
     if os.path.isfile("secret.key"):
         with open("secret.key", "rb") as key_file:
             key = key_file.read()
@@ -28,10 +28,14 @@ def generate_key():
             key_file.write(key)
     return key
 
-# Function to load the key from a file
-def load_key_from_file(file_name="secret.key"):
-    with open(file_name, "rb") as key_file:
-        return key_file.read()
+# Function to manually input a key or read from a file
+def input_key():
+    key_input = input("Enter the key or key file name: ")
+    if os.path.isfile(key_input):
+        with open(key_input, "rb") as key_file:
+            return key_file.read()
+    else:
+        return key_input.encode()
 
 # Function to encrypt the file
 def encrypt_file(file_path, key):
@@ -41,6 +45,7 @@ def encrypt_file(file_path, key):
     encrypted_data = f.encrypt(file_data)
     with open(file_path + ".encrypted", "wb") as file:
         file.write(encrypted_data)
+    print(f"File {file_path} has been encrypted.")
 
 # Function to decrypt the file
 def decrypt_file(file_path, key):
@@ -50,6 +55,7 @@ def decrypt_file(file_path, key):
     decrypted_data = f.decrypt(encrypted_data)
     with open(file_path.replace(".encrypted", ""), "wb") as file:
         file.write(decrypted_data)
+    print("File decrypted successfully.")
 
 # Function to encrypt a message
 def encrypt_message(message, key):
@@ -65,27 +71,23 @@ def decrypt_message(encrypted_message, key):
 
 # Main function to handle user interaction
 def main():
-    key = generate_key()
-    
-    print("Key is generated/loaded.")
-
     print("Select a mode:")
     print("1 - Encrypt a file")
     print("2 - Decrypt a file")
     print("3 - Encrypt a message")
     print("4 - Decrypt a message")
-
     mode = input("Enter mode (1, 2, 3, or 4): ")
 
     if mode in ["1", "2"]:
         file_path = input("Enter file path: ")
         if mode == "1":
+            key = generate_or_load_key()
             encrypt_file(file_path, key)
-            print(f"File {file_path} has been encrypted.")
         elif mode == "2":
+            key = input_key()
             decrypt_file(file_path, key)
-            print("File decrypted successfully.")
     elif mode in ["3", "4"]:
+        key = generate_or_load_key() if mode == "3" else input_key()
         message = input("Enter the message: ")
         if mode == "3":
             encrypt_message(message, key)
