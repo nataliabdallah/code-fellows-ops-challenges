@@ -8,6 +8,8 @@
 
 # this script calls on 401_7_challenge.py, attempt to test options 5 and 6 to script: 401_6_challenge.py
 
+# File Containting Functions: https://github.com/nataliabdallah/code-fellows-ops-challenges/blob/main/index/401_7_challenge.py
+
 from cryptography.fernet import Fernet
 import os
 # Import the folder operations from the other script
