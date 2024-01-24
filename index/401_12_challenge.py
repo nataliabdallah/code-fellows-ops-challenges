@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Script Name:                  Challenge 401 Class 7
+# Script Name:                  Challenge 401 Class 12
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      01/23/2024
 # Sources:                      https://chat.openai.com/, https://www.youtube.com/watch?v=vk4WWIreH8Q, https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python, https://pypi.org/project/cryptography/
