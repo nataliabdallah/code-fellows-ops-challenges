@@ -2,7 +2,7 @@
 
 # Script Name:                  Challenge 401 Class 7
 # Author Name:                  Nathalie Abdallah
-# Date of latest revision:      01/17/2024
+# Date of latest revision:      01/22/2024
 # Sources:                      https://chat.openai.com/, https://www.youtube.com/watch?v=vk4WWIreH8Q, https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python, https://pypi.org/project/cryptography/
 # Purpose:                      In Python, create a TCP Port Range Scanner that tests whether a TCP port is open or closed. The script must:
 
@@ -14,7 +14,6 @@
 # If flag 0x14 received, notify user the port is closed.
 # If no flag is received, notify the user the port is filtered and silently dropped.
 
-import scapy
 from scapy.all import IP, TCP, sr1, send
 
 # Define target and range of ports to scan
