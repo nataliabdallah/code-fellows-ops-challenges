@@ -12,27 +12,28 @@
 # Add a delay between words.
 # Print to the screen the value of the variable.
 # Mode 2: Defensive; Password Recognized
-
 # Accepts a user input string.
 # Accepts a user input word list file path.
 # Search the word list for the user input string.
 # Print to the screen whether the string appeared in the word list.
 
 import time
-choose = "choose"
-c = "_"
-ch16 = input(" {:^38}\n Option 1: Offensive; Dictionary Iterator\n\n Option 2:Defensive; Password Recognized\n                   ".format(choose))
+choose = "choose" # variable so i can format the word choose
 
-if ch16 == "1":
-    path = input("Enter file path: ")
+# variable for the function
+option= input(" {:^38}\n Option 1: Offensive; Dictionary Iterator\n\n Option 2:Defensive; Password Recognized\n                   ".format(choose))
+
+#function that reads the word list after file path is entered and prints to terminal
+if option == "1":
+    path = input("Enter file path: ") 
     with open(path, "r") as file:
         for line in file:
             word = line.strip()
             print(word)
             time.sleep(1)
-
-elif ch16 == "2":
-    usrinput = input("Enter string: ")
+# funrtion that inputs a word and serches the word list, of the word is found, then it will notify the results
+elif option == "2":
+    usrinput = input("Enter word: ")
     path = input("Enter file path: ")
     with open(path, "r") as file:
         words = file.read().splitlines()
