@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+
+# Script Name:                  Challenge 401 Class 18
+# Author Name:                  Nathalie Abdallah
+# Date of latest revision:      01/31/2024
+# Sources:                      https://chat.openai.com/, https://www.youtube.com/watch?v=vk4WWIreH8Q, https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python, https://pypi.org/project/cryptography/
+# Purpose:                      add a new mode to your Python brute force tool that allows you to brute force attack a password-locked zip file.
+
+# Use the zipfile library.
+# Pass it the RockYou.txt list to test all words in the list against the password-locked zip file.
+
 import time
 import paramiko
 import os
