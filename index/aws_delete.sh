@@ -2,6 +2,12 @@
 
 echo "AWS Resource Management and Teardown Script"
 
+# Function to list VPCs
+list_vpcs() {
+    echo "Available VPCs:"
+    aws ec2 describe-vpcs --query 'Vpcs[*].[VpcId,CidrBlock,Tags[?Key==`Name`].Value|[0],IsDefault]' --output table
+}
+
 # Function to manage EC2 instances
 manage_ec2_instances() {
     echo "Listing all EC2 instances..."
@@ -30,57 +36,41 @@ manage_s3_buckets() {
 
 # Function to delete NAT Gateways and release associated Elastic IPs
 delete_nat_gateways() {
-    echo "Listing NAT Gateways..."
+    echo "Deleting NAT Gateways in VPC $vpc_id..."
     nat_ids=$(aws ec2 describe-nat-gateways --filter "Name=vpc-id,Values=$vpc_id" --query 'NatGateways[*].NatGatewayId' --output text)
     for id in $nat_ids; do
         echo "Deleting NAT Gateway: $id"
         aws ec2 delete-nat-gateway --nat-gateway-id $id
-        echo "NAT Gateway $id deleted."
     done
-
     echo "Waiting for NAT Gateways to be deleted..."
     sleep 60  # Adjust based on your AWS environment
-
-    echo "Releasing Elastic IPs associated with deleted NAT Gateways..."
-    eip_alloc_ids=$(aws ec2 describe-addresses --filter "Name=domain,Values=vpc" --query 'Addresses[?AssociationId==null].AllocationId' --output text)
-    for alloc_id in $eip_alloc_ids; do
-        echo "Releasing Elastic IP: $alloc_id"
-        aws ec2 release-address --allocation-id $alloc_id
-        echo "Elastic IP $alloc_id released."
-    done
 }
 
 # Function to detach and delete Internet Gateways
 delete_internet_gateways() {
-    echo "Listing Internet Gateways..."
+    echo "Detaching and Deleting Internet Gateways in VPC $vpc_id..."
     igw_ids=$(aws ec2 describe-internet-gateways --filter "Name=attachment.vpc-id,Values=$vpc_id" --query 'InternetGateways[*].InternetGatewayId' --output text)
     for id in $igw_ids; do
-        echo "Detaching and Deleting Internet Gateway: $id"
         aws ec2 detach-internet-gateway --internet-gateway-id $id --vpc-id $vpc_id
         aws ec2 delete-internet-gateway --internet-gateway-id $id
-        echo "Internet Gateway $id deleted."
     done
 }
 
 # Function to delete Subnets
 delete_subnets() {
-    echo "Listing Subnets..."
+    echo "Deleting Subnets in VPC $vpc_id..."
     subnet_ids=$(aws ec2 describe-subnets --filter "Name=vpc-id,Values=$vpc_id" --query 'Subnets[*].SubnetId' --output text)
     for id in $subnet_ids; do
-        echo "Deleting Subnet: $id"
         aws ec2 delete-subnet --subnet-id $id
-        echo "Subnet $id deleted."
     done
 }
 
 # Function to delete Route Tables
 delete_route_tables() {
-    echo "Listing Route Tables..."
+    echo "Deleting Route Tables in VPC $vpc_id..."
     rt_ids=$(aws ec2 describe-route-tables --filter "Name=vpc-id,Values=$vpc_id" --query 'RouteTables[?Associations[0].Main!=`true`].RouteTableId' --output text)
     for id in $rt_ids; do
-        echo "Deleting Route Table: $id"
         aws ec2 delete-route-table --route-table-id $id
-        echo "Route Table $id deleted."
     done
 }
 
@@ -88,11 +78,11 @@ delete_route_tables() {
 delete_vpc() {
     echo "Deleting VPC: $vpc_id"
     aws ec2 delete-vpc --vpc-id $vpc_id
-    echo "VPC $vpc_id deleted."
 }
 
 # Function to teardown AWS network infrastructure
 teardown_network_infrastructure() {
+    list_vpcs
     read -p "Enter the VPC ID you want to teardown: " vpc_id
     delete_nat_gateways
     delete_internet_gateways
@@ -119,3 +109,4 @@ while true; do
         *) echo "Invalid option, please enter a number between 1 and 4." ;;
     esac
 done
+
