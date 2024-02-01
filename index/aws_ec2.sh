@@ -32,13 +32,16 @@ else
     chmod 400 "${key_name}.pem"
 fi
 
+# Prompt user for instance name
+read -p "Enter a name for the EC2 instance: " instance_name
+
 # Get the AMI ID for Ubuntu Server 20.04 LTS (HVM), SSD Volume Type
 echo "Retrieving Ubuntu Server 20.04 LTS AMI ID..."
 ami_id=$(aws ec2 describe-images --owners 099720109477 --filters "Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*" "Name=state,Values=available" --query 'Images | sort_by(@, &CreationDate) | [-1].ImageId' --output text)
 
-# Launch the instance
+# Launch the instance with the name tag
 echo "Launching EC2 instance..."
-instance_id=$(aws ec2 run-instances --image-id "$ami_id" --count 1 --instance-type t2.micro --key-name "$key_name" --security-group-ids "$sg_id" --subnet-id "$subnet_id" --query 'Instances[0].InstanceId' --output text)
-echo "Launched instance with ID: $instance_id"
+instance_id=$(aws ec2 run-instances --image-id "$ami_id" --count 1 --instance-type t2.micro --key-name "$key_name" --security-group-ids "$sg_id" --subnet-id "$subnet_id" --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$instance_name}]" --query 'Instances[0].InstanceId' --output text)
+echo "Launched instance with ID: $instance_id and Name: $instance_name"
 
 echo "EC2 instance deployment completed successfully."

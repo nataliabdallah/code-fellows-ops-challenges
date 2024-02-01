@@ -2,8 +2,12 @@
 
 echo "Starting creation of AWS Security Group and adding inbound rules..."
 
+# List available VPCs
+echo "Available VPCs:"
+aws ec2 describe-vpcs --query 'Vpcs[*].[VpcId,State,CidrBlock]' --output table
+
 # Prompt user for VPC ID
-read -p "Enter your VPC ID: " vpc_id
+read -p "Enter your VPC ID from the list above: " vpc_id
 
 # Prompt user for Security Group Name
 read -p "Enter the name for your Security Group: " sg_name
