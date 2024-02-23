@@ -3,14 +3,6 @@
 # Script Name:                  Challenge 33 Event Logging part 3/3
 # Author Name:                  Nathalie Abdallah
 # Date of latest revision:      02/21/2023
-# Sources:                      https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
-# Purpose:                      Objectives
-
-#!/usr/bin/env python3
-
-# Script Name:                  Challenge 33 Event Logging part 3/3
-# Author Name:                  Nathalie Abdallah
-# Date of latest revision:      02/21/2023
 # Sources:                     "Marco"; https://chat.openai.com/, https://github.com/codefellows/seattle-ops-301d10
 # Purpose:                      Objectives
 
