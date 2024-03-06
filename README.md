@@ -5,7 +5,7 @@ In this Repository, you'll discover a wealth of knowledge gained during OPS 201,
 These shell scripting examples can be directly applied to the workplace, automating routine security tasks and improving an organization's security posture. With more time, the purpose is to refine and expand these scripts and deepen expertise in Bash, PowerShell, and Python scripting, ultimately strengthening one of the many cybersecurity skillset.
 
 # ops-201d10-code-challenges
-Code Challenges
+
 <br>
 | [2](index/201_2_my_first_bash_script.sh) | [3](index/201_3_functions.sh) | [4](index/201_4_arrays.sh) | [5](index/201_5_loops.sh) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
@@ -25,7 +25,7 @@ Code Challenges
 
 # ops-401d10-code-challenges
 
-| [2](index/201_2_my_first_bash_script.sh) | [3](index/201_3_functions.sh) | [4](index/201_4_arrays.sh) | [5](index/201_5_loops.sh) |
+| [1](401_1_Demo.py) | [2.1](index/401_2_challenge.py)[2.2](index/401_2_class.txt)[2.3](401_2_demo2.py) | [3.1](index/401_3_challenge.py)[3.2](401_3_class.txt) | [4.1](index/401_4_challenge.ps1)[4.2](401_4_challenge.py) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
 | [6](index/201_6_conditionals.sh) | [7](index/201_7_system_information.sh) | [8](index/201_8_windows_batch_scripting.bat) | [9](index/201_9_log_retrieval_via_powershell.ps1) 
 | [10](index/201_10_system_process_commands.ps1) | [11](index/201_11_automated_endpoint_configuration.ps1) | [12]() | [13](index/201_13_domain_analyzer.sh) 
