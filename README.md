@@ -34,6 +34,7 @@ These shell scripting examples can be directly applied to the workplace, automat
 | [26](index/401_26_event_logging.py) | [27](index/401_27_event_logging_2.py) | [28](index/401_28_event_logging_3.py) | [32](index/401_32_detect_part2.py)
 | [33](index/401_33_detect_part3.py) | [36](index/401_36_web_application_fingerprinting.py) | [37](index/401_37_sweets.py) | [38](index/401_38_description.py)
 | [42](index/401_42_nmap.py) | [AWS.securitygrp](index/aws_securitygrp.sh) | [AWS.VPC](index/aws_vpc.sh) | [AWS.delete](index/aws_delete.sh)
+| [AWS.Cloud Trail](index/aws_cloud_trail.sh), [Delete Cloud Trail](index/aws_delete_cloud_trail.sh) | [AWS.EC2](index/aws_ec2.sh) | [AWS.list](index/aws_list.sh) | [AWS.Cost](index/aws_cost.py)
 <br>
 <br>
 Feel free to navigate through my repos to see my Challenges 🍓
