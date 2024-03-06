@@ -28,10 +28,12 @@ These shell scripting examples can be directly applied to the workplace, automat
 
 | [1](401_1_Demo.py) | [2.1](index/401_2_challenge.py), [2.2](index/401_2_class.txt), [2.3](401_2_demo2.py) | [3.1](index/401_3_challenge.py), [3.2](401_3_class.txt) | [4.1](index/401_4_challenge.ps1), [4.2](401_4_challenge.py) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
-| [6](index/201_6_conditionals.sh) | [7](index/201_7_system_information.sh) | [8](index/201_8_windows_batch_scripting.bat) | [9](index/201_9_log_retrieval_via_powershell.ps1) 
-| [10](index/201_10_system_process_commands.ps1) | [11](index/201_11_automated_endpoint_configuration.ps1) | [12]() | [13](index/201_13_domain_analyzer.sh) 
-| [14](index/201_14_github.md) | [15]() | [16]() | [17]()
-
+| [6](401_6_secret.txt), [6.1](401_6_1_challenge.py) | [6.2](401_6_2_challenge.py) | [6.3](index/401_6_3_challenge.py) | [6.4](index/401_6_4_challenge.py) 
+| [6.5](index/401_6_5_challenge.py) [🍓](401_6_mysecret.key) | [7](index/401_7_challenge.py) | [11](index/401_11_challenge.py) | [12](index/401_12_challenge.py) 
+| [13](index/401_13_challenge.py) | [16](index/401_16_challenge.py) | [17](index/401_17_challenge.py) | [18](index/401_18_challenge.py)
+| [26](index/401_26_event_logging.py) | [27](index/401_27_event_logging_2.py) | [28](index/401_28_event_logging_3.py) | [32](index/401_32_detect_part2.py)
+| [33](index/401_33_detect_part3.py) | [36](index/401_36_web_application_fingerprinting.py) | [37](index/401_37_sweets.py) | [38](index/401_38_description.py)
+| [42](index/401_42_nmap.py) | [AWS.securitygrp](index/aws_securitygrp.sh) | [AWS.VPC](index/aws_vpc.sh) | [AWS.delete](index/aws_delete.sh)
 <br>
 <br>
 Feel free to navigate through my repos to see my Challenges 🍓
