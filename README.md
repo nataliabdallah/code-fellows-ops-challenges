@@ -18,9 +18,10 @@ Code Challenges
 # ops-301d10-code-challenges
 | [2](index/201_2_my_first_bash_script.sh) | [3](index/201_3_functions.sh) | [4](index/201_4_arrays.sh) | [5](index/201_5_loops.sh) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
-| [6](index/201_6_conditionals.sh) | [7](index/201_7_system_information.sh) | [8](index/201_8_windows_batch_scripting.bat) | [9](index/201_9_log_retrieval_via_powershell.ps1) 
-| [10](index/201_10_system_process_commands.ps1) | [11](index/201_11_automated_endpoint_configuration.ps1) | [12]() | [13](index/201_13_domain_analyzer.sh) 
-| [14](index/201_14_github.md) | [15]() | [16]() | [17]()
+| [2](index/301_2_append-date-time.sh) | [3](index/301_3_file-permissions.sh) | [4](index/301_4_conditional-in-menu-systems.sh) | [5](index/301_5_clearing-logs.sh) 
+| [6](index/301_6_bash-in-python.py) | [7a](index/301_7a_directory-creation.py) | [7b](301_7b_directory-creation.py) | [8](index/301_8_python-collections.py) 
+| [9](index/301_9_python-conditional-statements.py) | [10](index/301_10_python-file-handling.py) | [11](index/301_11_psutil.py) | [12](index/301_12_python-rquest-library.py)
+| [13](index/301_13_powershell-ad-automation.ps1) | [13a](index/301_13a_powershell-ad-automation.ps1) | [14](index/301_14_python-malware-analysis.py) | [🍓]()
 <br>
 
 # ops-401d10-code-challenges
