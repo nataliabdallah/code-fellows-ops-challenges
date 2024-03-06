@@ -25,7 +25,7 @@ These shell scripting examples can be directly applied to the workplace, automat
 
 # ops-401d10-code-challenges
 
-| [1](401_1_Demo.py) | [2.1](index/401_2_challenge.py)[2.2](index/401_2_class.txt)[2.3](401_2_demo2.py) | [3.1](index/401_3_challenge.py)[3.2](401_3_class.txt) | [4.1](index/401_4_challenge.ps1)[4.2](401_4_challenge.py) |
+| [1](401_1_Demo.py) | [2.1, ](index/401_2_challenge.py)[2.2, ](index/401_2_class.txt)[2.3](401_2_demo2.py) | [3.1, ](index/401_3_challenge.py)[3.2](401_3_class.txt) | [4.1](index/401_4_challenge.ps1)[4.2](401_4_challenge.py) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
 | [6](index/201_6_conditionals.sh) | [7](index/201_7_system_information.sh) | [8](index/201_8_windows_batch_scripting.bat) | [9](index/201_9_log_retrieval_via_powershell.ps1) 
 | [10](index/201_10_system_process_commands.ps1) | [11](index/201_11_automated_endpoint_configuration.ps1) | [12]() | [13](index/201_13_domain_analyzer.sh) 
