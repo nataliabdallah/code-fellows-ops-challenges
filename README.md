@@ -16,9 +16,8 @@ Code Challenges
 <br>
 
 # ops-301d10-code-challenges
-| [2](index/201_2_my_first_bash_script.sh) | [3](index/201_3_functions.sh) | [4](index/201_4_arrays.sh) | [5](index/201_5_loops.sh) |
+| [2](index/301_2_append-date-time.sh) | [3](index/301_3_file-permissions.sh) | [4](index/301_4_conditional-in-menu-systems.sh) | [5](index/301_5_clearing-logs.sh) |
 |:----------------------:|:-----------------------:|:----------------------:|:----------------------:|
-| [2](index/301_2_append-date-time.sh) | [3](index/301_3_file-permissions.sh) | [4](index/301_4_conditional-in-menu-systems.sh) | [5](index/301_5_clearing-logs.sh) 
 | [6](index/301_6_bash-in-python.py) | [7a](index/301_7a_directory-creation.py) | [7b](301_7b_directory-creation.py) | [8](index/301_8_python-collections.py) 
 | [9](index/301_9_python-conditional-statements.py) | [10](index/301_10_python-file-handling.py) | [11](index/301_11_psutil.py) | [12](index/301_12_python-rquest-library.py)
 | [13](index/301_13_powershell-ad-automation.ps1) | [13a](index/301_13a_powershell-ad-automation.ps1) | [14](index/301_14_python-malware-analysis.py) | [🍓]()
