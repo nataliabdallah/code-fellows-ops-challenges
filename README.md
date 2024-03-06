@@ -1,4 +1,4 @@
-### Welcome to my Code Fellows Cybersecurity Repository, focusing on mastering Bash and PowerShell scripting for OPS d10!
+### Welcome to my Code Fellows Cybersecurity Repository, focusing on mastering Bash, PowerShell, and Python scripting for OPS 201d10, 301d10, and 401d10!
 In this Repository, you'll discover a wealth of knowledge gained during OPS 201, 301, and 401, where I learned to automate tasks, bolster security measures, and enhance operational efficiency. The fundamentals concepts covered, including command-line basics, scripting fundamentals, security automation, and log analysis, provide a strong foundation for my scripting skills.
 <br>
 <br>
